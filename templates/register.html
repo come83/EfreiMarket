@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Registration</title>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/validerFormulaire.js') }}">
+    </script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="../static/css/style.css">
+   
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src={{ url_for('static', filename='images/logo.png') }} /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+				{% if not logged %}
+				<li class="nav-item">
+                    <a class="nav-link" href="/loginForm">Se connecter</a>
+                </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/registerationForm">Inscription</a>
+				</li>
+
+				{% else %}
+				<li class="nav-item">
+
+					<div class="dropdown">
+						<button class="dropbtn">Bonjour, {{username}}</button>
+						<div class="dropdown-content">
+							<a href="/logout">Deconnexion</a>
+						</div>
+					</div>
+				</li>
+
+				{% endif %}
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/toutParcourir">Tout parcourir</a>
+                </li>
+                
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/panier">
+						Panier {{noOfItems}}
+					</a>
+                </li>
+			
+                
+				<li class="nav-item">
+                    <a class="nav-link" href="/ajout">Ajouter un produit</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/supprimer">Supprimer un produit</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <form action="/register" method="POST" onsubmit="return validate()">
+            <p>Email: <input type="email" name="email" required></p>
+            <p>Mot de passe: <input type="password" name="password" id="password" required></p>
+            <p>Confirmer le mot de passe: <input type="password" name="password2" id="password2" required></p>
+            <p>Username: <input type="text" name="username" required></p>
+            <p>Prénom: <input type="text" name="prenom" required></p>
+            <p>Nom: <input type="text" name="nom" required></p>
+            <p><input type="submit" value="Register"></p>
+            <a href="/loginForm">Login here</a>
+        </form>
+    </div>
+</body>
+
+</html>

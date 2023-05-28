@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	
+<head>
+	<title>Checkout</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src={{ url_for('static', filename='images/logo.png') }} /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+				{% if not logged %}
+				<li class="nav-item">
+                    <a class="nav-link" href="/loginForm">Se connecter</a>
+                </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/registerationForm">Inscription</a>
+				</li>
+
+				{% else %}
+				<li class="nav-item">
+
+					<div class="dropdown">
+						<button class="dropbtn">Bonjour, {{username}}</button>
+						<div class="dropdown-content">
+							<a href="/logout">Deconnexion</a>
+						</div>
+					</div>
+				</li>
+
+				{% endif %}
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/toutParcourir">Tout parcourir</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/panier">
+						Panier {{noOfItems}}
+					</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/ajout">Ajouter un produit</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/supprimer">Supprimer un produit</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<p>Votre commande a été passée avec succès</p>
+	<div id="panierItems">
+	<h2>Voici les produits achetés</h2>
+	<div id="tableItems">
+		{% for row in produits %}
+		<div>
+			<hr id="seperator">
+			<div id="itemnom">
+				<span id="itemnomTag">{{row[1]}}</span><br>
+			</div>
+			<div id="itemprix">
+				${{row[2]}}
+			</div>
+		</div>
+		{% endfor %}
+		<hr id="seperator">
+		<div id="total">
+			<span id="subtotal">Le coût total de votre commande est de</span> : ${{totalprix}}
+			<span if="deliverydate"></span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

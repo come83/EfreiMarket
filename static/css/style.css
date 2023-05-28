@@ -1,0 +1,306 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #c1b9b9; 
+}
+
+#logo {
+    height: 40px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form input[type="submit"],
+form input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container form input[type="submit"]:hover,
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container a {
+    text-decoration: none;
+    color: #777;
+}
+
+.container a:hover {
+    color: #333;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.item {
+    text-align: center;
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#produitInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#produitnom {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#detailProduit {
+    flex: 2;
+    margin-top: 40px;
+}
+
+#addTopanier a {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+#addTopanier a:hover {
+    background-color: #45a049;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.col-form-label {
+    flex-basis: 30%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-control {
+    flex: 1;
+}
+
+#title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+#title form input[type="text"],
+#title form input[type="submit"],
+#title a {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+#title form input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#title form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#title a {
+    text-decoration: none;
+    color: #777;
+}
+
+#title a:hover {
+    color: #333;
+}
+
+#panierItems {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: 20px auto;
+}
+
+#panierItems h2,
+#panierItems p {
+    margin: 10px 0;
+}
+
+#panierItems a {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    text-decoration: none;
+    color: #777;
+}
+
+#panierItems a:hover {
+    color: #333;
+}
+
+a[href="/checkout"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+a[href="/checkout"]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form p {
+    margin: 10px 0;
+}
+
+.container form input[type="text"],
+.container form input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.container form input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container a {
+    text-decoration: none;
+    color: #777;
+}
+
+.container a:hover {
+    color: #333;
+}
+
+.itemGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+
+.container {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* pour utiliser la largeur complète disponible */
+    box-sizing: border-box; /* pour inclure la marge et le padding dans la largeur */
+}
+
+
+
+
+
+
